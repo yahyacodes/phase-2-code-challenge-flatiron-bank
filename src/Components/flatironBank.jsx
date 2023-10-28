@@ -1,19 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const FlatironBank = ({ description, category, date, amount }) => {
+const FlatironBank = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/transactions")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
   return (
-    <div className="relative overflow-x-auto">
-      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead className="text-xs">
-          <tr>
-            <td>{date}</td>
-            <td>{description}</td>
-            <td>{category}</td>
-            <td>{amount}</td>
-          </tr>
-        </thead>
-      </table>
-    </div>
+    <>
+      <div className="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+        </table>
+
+        {data.map((bank) => (
+          <table>
+            <tbody>
+              <tr>
+                <td>{bank.date}</td>
+                <td>{bank.description}</td>
+                <td>{bank.category}</td>
+                <td>{bank.amount}</td>
+              </tr>
+            </tbody>
+          </table>
+        ))}
+      </div>
+    </>
   );
 };
 

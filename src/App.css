@@ -5,6 +5,27 @@
   text-align: center;
 }
 
+.container {
+  margin: auto;
+  width: 50%;
+  padding: 10px 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #cccccc, -5px -5px 15px #f4f4f4;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
