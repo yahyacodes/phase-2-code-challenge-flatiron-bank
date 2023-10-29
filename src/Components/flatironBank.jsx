@@ -12,7 +12,7 @@ const FlatironBank = () => {
   }, []);
   return (
     <>
-      <div className="container">
+      <div>
         <table>
           <thead>
             <tr>
@@ -25,7 +25,7 @@ const FlatironBank = () => {
         </table>
 
         {data.map((bank) => (
-          <table>
+          <table key={bank.id}>
             <tbody>
               <tr>
                 <td>{bank.date}</td>

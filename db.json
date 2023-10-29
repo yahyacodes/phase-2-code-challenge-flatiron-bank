@@ -97,6 +97,20 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
+    },
+    {
+      "date": "2023-10-24",
+      "description": "Coffee",
+      "category": "Drinks",
+      "amount": "5",
+      "id": 15
+    },
+    {
+      "date": "2023-10-17",
+      "description": "Books",
+      "category": "Reading",
+      "amount": "20",
+      "id": 16
     }
   ]
 }
