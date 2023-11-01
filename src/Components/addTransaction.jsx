@@ -25,7 +25,10 @@ const AddTransaction = () => {
 
   return (
     <>
-      <div className="relative">
+      <h1 className="text-white bg-violet-700 focus:ring-blue-300 font-medium rounded-lg text-sm w-full py-2">
+        The Royal Bank of Flatiron
+      </h1>
+      <div className="relative pt-2 ">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <svg
             className="w-4 h-4 text-gray-500"
@@ -100,7 +103,7 @@ const AddTransaction = () => {
         </div>
         <button
           type="button"
-          className="text-white bg-blue-700 focus:ring-blue-300 font-medium rounded-lg text-sm w-full py-2"
+          className="text-gray-900 bg-gray-300 focus:ring-blue-300 font-medium rounded-lg text-sm w-40  py-2"
           onClick={handleSubmit}
         >
           Add Transaction

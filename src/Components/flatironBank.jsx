@@ -12,30 +12,30 @@ const FlatironBank = () => {
   }, []);
   return (
     <>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Description</th>
-              <th>Category</th>
-              <th>Amount</th>
+      <div className="relative overflow-x-auto pt-4">
+        <table className="w-full text-sm text-left text-gray-800">
+          <thead className="text-gray-700 text-md uppercase">
+            <tr className="bg-violet-50 rounded-lg">
+              <th className="p-2">Date</th>
+              <th className="p-2">Description</th>
+              <th className="p-2">Category</th>
+              <th className="p-2">Amount</th>
             </tr>
           </thead>
-        </table>
-
-        {data.map((bank) => (
-          <table key={bank.id}>
-            <tbody>
-              <tr>
-                <td>{bank.date}</td>
-                <td>{bank.description}</td>
-                <td>{bank.category}</td>
-                <td>{bank.amount}</td>
+          <tbody>
+            {data.map((bank) => (
+              <tr
+                key={bank.id}
+                className="even:bg-violet-50 text-sm rounded-lg"
+              >
+                <td className="p-2">{bank.date}</td>
+                <td className="p-2">{bank.description}</td>
+                <td className="p-2">{bank.category}</td>
+                <td className="p-2">{bank.amount}</td>
               </tr>
-            </tbody>
-          </table>
-        ))}
+            ))}
+          </tbody>
+        </table>
       </div>
     </>
   );

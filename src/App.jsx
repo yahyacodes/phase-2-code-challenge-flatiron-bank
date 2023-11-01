@@ -5,7 +5,7 @@ import AddTransaction from "./Components/addTransaction";
 
 function App() {
   return (
-    <div className="container">
+    <div className="container shadow-lg rounded-lg p-4">
       <AddTransaction />
       <FlatironBank />
     </div>
